@@ -1,0 +1,23 @@
+[2026-10-20T15:39:21] C5a S read pequeno ok
+[2026-10-20T15:39:43] C5a S read grande ok
+[2026-10-20T15:39:48] C5a S mmap pequeno ok
+[2026-10-20T15:40:11] C5a S mmap grande ok
+[2026-10-20T15:40:16] C5a M read pequeno ok
+[2026-10-20T15:40:39] C5a M read grande ok
+[2026-10-20T15:40:45] C5a M mmap pequeno ok
+[2026-10-20T15:41:07] C5a M mmap grande ok
+[2026-10-20T15:41:15] C5a L read pequeno ok
+[2026-10-20T15:41:39] C5a L read grande ok
+[2026-10-20T15:41:46] C5a L mmap pequeno ok
+[2026-10-20T15:42:11] C5a L mmap grande ok
+[2026-10-20T15:42:14] C5b lote=256 ok
+[2026-10-20T15:42:17] C5b lote=4096 ok
+[2026-10-20T15:42:20] C5b lote=65536 ok
+[2026-10-20T15:42:26] C5c mmap lim=None swap=False ok
+[2026-10-20T15:42:32] C5c mmap lim=160 swap=False ok
+[2026-10-20T15:42:37] C5c mmap lim=96 swap=False ok
+[2026-10-20T15:42:43] C5c mmap lim=64 swap=False ok
+[2026-10-20T15:42:49] C5c read lim=None swap=False ok
+[2026-10-20T15:42:55] C5c read lim=384 swap=False ok
+[2026-10-20T15:42:56] C5c read lim=192 swap=False ok
+[2026-10-20T15:43:22] C5c read lim=192 swap=True ok

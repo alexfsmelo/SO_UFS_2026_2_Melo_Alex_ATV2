@@ -1,0 +1,6 @@
+{"ts": 1792521803.93213, "thread": "MainThread", "evento": "falha_ingestao", "arquivo": "data/S/docs/ausente_0.txt", "erro": "FileNotFoundError", "msg": "[Errno 2] No such file or directory: 'data/S/docs/ausente_0.txt'"}
+{"ts": 1792521803.932208, "thread": "MainThread", "evento": "falha_ingestao", "arquivo": "data/S/docs/ausente_1.txt", "erro": "FileNotFoundError", "msg": "[Errno 2] No such file or directory: 'data/S/docs/ausente_1.txt'"}
+{"ts": 1792521803.932229, "thread": "MainThread", "evento": "falha_ingestao", "arquivo": "data/S/docs/ausente_2.txt", "erro": "FileNotFoundError", "msg": "[Errno 2] No such file or directory: 'data/S/docs/ausente_2.txt'"}
+{"ts": 1792521803.932241, "thread": "MainThread", "evento": "falha_ingestao", "arquivo": "data/S/docs/ausente_3.txt", "erro": "FileNotFoundError", "msg": "[Errno 2] No such file or directory: 'data/S/docs/ausente_3.txt'"}
+{"ts": 1792521803.932249, "thread": "MainThread", "evento": "falha_ingestao", "arquivo": "data/S/docs/ausente_4.txt", "erro": "FileNotFoundError", "msg": "[Errno 2] No such file or directory: 'data/S/docs/ausente_4.txt'"}
+{"ts": 1792521804.009167, "thread": "MainThread", "evento": "ingestao_concluida", "n_docs": 500, "n_trechos": 2696, "falhas_leitura": 5, "t_total_s": 0.0864228190000631}

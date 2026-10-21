@@ -1,0 +1,24 @@
+# Roteiro do vídeo (AV2, até 20 minutos)
+
+Gravação sugerida: tela dividida entre os slides e um terminal Linux (WSL2) na raiz do repositório `SO_UFS_2026_2_Melo_Alex_ATV2`. Tempo-alvo: 15 a 17 minutos. Os comandos estão em `docs/comandos-video.txt`.
+
+| Tempo | Bloco | O que mostrar | O que dizer (pontos-chave) |
+|---|---|---|---|
+| 0:00 a 1:00 | Abertura | Slide 1 e 2 | Quem sou, disciplina, pergunta norteadora: como memória, armazenamento, cache, filas e sincronização afetam desempenho, estabilidade e correção de uma aplicação de RAG. |
+| 1:00 a 2:30 | Ambiente (Parte A) | Slide de ambiente; `free -h`, `swapon --show`, `lscpu` | VM KVM, Ubuntu 24.04, 2 vCPUs, 7,8 GiB, sem swap fixo. Diferença entre MemFree e MemAvailable: o cache de páginas é memória reaproveitável, não desperdício. |
+| 2:30 a 4:30 | Arquitetura e código | Slide de arquitetura; abrir `bbuffer.py`, `cache.py`, `logger.py` | Produtores e consumidores com semáforos `empty`/`full` e mutex; cache com três modos; log com uma única chamada `write()` por linha sob mutex. Por que threads: a geração é espera de E/S (como esperar o Ollama por HTTP), e o NumPy libera o GIL na multiplicação de matrizes. |
+| 4:30 a 6:30 | Demo ao vivo | Comandos 3 a 6 | Rodar o servidor e, em outro terminal, `ps -L` com os nomes `worker-N` e `produtor-N`, `/proc/PID/maps` mostrando `vectors.f32` mapeado e `/proc/PID/status` com RssAnon x RssFile. |
+| 6:30 a 8:30 | C1 x C2 (read x mmap) | Gráficos f1 e f2; `strace` resumido | read copia o arquivo inteiro para memória anônima (RSS cresce do tamanho do arquivo); mmap só traz as páginas tocadas. No acesso esparso ao XL de 1 GB, o mmap acrescentou cerca de 22 MB de RSS contra 1.030 MB do read. Com cache quente, mmap evita a cópia. madvise RANDOM desliga o readahead e multiplica as faltas de página maiores. |
+| 8:30 a 10:00 | C3 e C4 | Gráficos f3 e f5 | Carga de E/S escala quase linear com 1, 2 e 4 threads; carga de CPU em Python puro não escala por causa do GIL. Fila grande não aumenta vazão, só aumenta a espera. Cache: taxa de acerto alta com consultas repetidas e paráfrases, zero com consultas distintas; singleflight elimina cálculo duplicado. |
+| 10:00 a 12:00 | C5 e C6 | Gráficos f6 e f7; tabela de falhas | Corpus L com read ocupa centenas de MB de RSS; com cgroup de 64 MB o mmap continua funcionando, mas relê o arquivo do disco a cada consulta (faltas de página maiores e latência sobem: sinal de thrashing). read sob 192 MB sem swap é morto por OOM; a recuperação é usar mmap. Falhas de arquivo, índice, fila cheia e serviço externo são tratadas sem derrubar o processo. |
+| 12:00 a 14:00 | Parte D ao vivo | Comandos 9 a 11 | Atualização perdida, cálculo duplicado e log intercalado sem proteção; deadlock em processo isolado: `ingenuo` trava (threads em `futex_do_wait`), `timeout` detecta e recupera, `ordenado` previne. Starvation de escritor com preferência a leitores. |
+| 14:00 a 15:30 | IA generativa e limitações | Slides finais | mmap é como runtimes carregam pesos GGUF e índices vetoriais; cache de páginas explica a diferença entre a primeira e a segunda carga do modelo; KV-cache e contexto crescem a memória como o top-k aqui. Limites: embeddings simulados, geração simulada, 2 vCPUs, sem GPU, um só nó. |
+| 15:30 a 16:00 | Encerramento | Slide final | Repositório, relatório e onde estão os dados brutos. |
+
+## Perguntas prováveis na apresentação oral (e respostas curtas)
+
+* **Por que o RSS do mmap também chega a 246 MB na varredura?** Porque a varredura toca todas as páginas; elas entram como RSS de arquivo (compartilhável e descartável pelo kernel), não como memória anônima. A diferença aparece sob pressão: páginas de arquivo limpas podem ser descartadas e relidas; páginas anônimas precisam de swap ou provocam OOM.
+* **Por que o read com cache quente ainda demora?** O arquivo já está no cache de páginas, mas o `read()` copia tudo para um buffer novo, e cada página desse buffer gera uma falta de página menor (zero-fill). Foram cerca de 262 mil faltas para 1 GB.
+* **O mutex no log é necessário se o arquivo usa O_APPEND?** No Linux, um único `write()` em arquivo regular com O_APPEND é posicionado de forma atômica. O mutex garante que a linha saia em uma só chamada, mantém os contadores consistentes e não depende desse detalhe da plataforma. A falha controlada grava a linha em pedaços para mostrar o que acontece sem isso.
+* **Por que threads e não processos?** A etapa dominante é espera (E/S); threads compartilham o índice mapeado e o cache sem cópia. Para carga de CPU em Python puro, processos seriam a escolha certa, e o C3 mostra isso.
+* **O contador sem mutex perdeu atualizações sem a pausa artificial?** Quase nunca, porque o GIL só troca de thread em intervalos; a corrida existe, mas é rara. A pausa `sleep(0)` amplia a janela para torná-la reproduzível, e com o mutex a mesma janela não perde nada.

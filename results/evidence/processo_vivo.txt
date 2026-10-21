@@ -1,0 +1,108 @@
+### ps -o pid,ppid,nlwp,stat,rss,vsz,pcpu,cmd -p 7961
+  PID  PPID NLWP STAT   RSS    VSZ %CPU CMD
+ 7961  7894    9 Sl   311192 1099476 151 python3 -m genresearch serve --indice index/L --saida results/raw/evid --rotulo proc_vivo --requisicoes 400 --trabalhadores 4 --produtores 2 --chegada-ms 5 --quiet
+
+### ps -L (threads)
+  PID   LWP STAT %CPU COMMAND         WCHAN
+ 7961  7961 Sl    4.4 python3         futex_do_wait
+ 7961  7963 Rl   91.8 python3         -
+ 7961  7964 Sl    0.4 amostrador      futex_do_wait
+ 7961  7965 Sl   15.1 worker-0        hrtimer_nanosleep
+ 7961  7968 Sl   14.2 worker-1        hrtimer_nanosleep
+ 7961  7969 Sl   13.9 worker-2        hrtimer_nanosleep
+ 7961  7970 Sl   13.5 worker-3        hrtimer_nanosleep
+ 7961  7971 Sl    0.0 produtor-0      futex_do_wait
+ 7961  7972 Sl    0.0 produtor-1      futex_do_wait
+
+### /proc/7961/task/*/comm
+7961 python3 futex_do_wait
+7963 python3 0
+7964 amostrador futex_do_wait
+7965 worker-0 hrtimer_nanosleep
+7968 worker-1 0
+7969 worker-2 hrtimer_nanosleep
+7970 worker-3 hrtimer_nanosleep
+7971 produtor-0 futex_do_wait
+7972 produtor-1 futex_do_wait
+
+### /proc/7961/status (memoria)
+Name:	python3
+State:	S (sleeping)
+VmPeak:	 1104380 kB
+VmSize:	 1099476 kB
+VmHWM:	  312424 kB
+VmRSS:	  312424 kB
+RssAnon:	   39664 kB
+RssFile:	  272760 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+Threads:	9
+voluntary_ctxt_switches:	21
+nonvoluntary_ctxt_switches:	4
+
+### /proc/7961/maps (arquivos do indice mapeados)
+7fe943c00000-7fe948791000 r--s 00000000 fe:00 892947                     /home/claude/repo/av2/index/L/texts.bin
+7fe948800000-7fe955c43000 r--s 00000000 fe:00 892946                     /home/claude/repo/av2/index/L/vectors.f32
+7fe955c57000-7fe955e00000 r--s 00000000 fe:00 892944                     /home/claude/repo/av2/index/L/offsets.i64
+7fe95ba94000-7fe95ba9c000 rw-s 00000000 fe:00 893496                     /home/claude/repo/av2/index/L/chunks.db-shm
+
+### /proc/7961/smaps do vectors.f32
+Size:             217356 kB
+Rss:              217356 kB
+Pss:              217356 kB
+Shared_Clean:          0 kB
+Private_Clean:    217356 kB
+Anonymous:             0 kB
+
+### /proc/7961/io
+rchar: 10873877
+wchar: 146376
+syscr: 2092
+syscw: 139
+read_bytes: 59494400
+write_bytes: 57344
+cancelled_write_bytes: 0
+
+### descritores abertos
+  
+0 -> /dev/null
+1 -> /home/claude/repo/av2/results/logs/evidencias.out
+10 -> /home/claude/repo/av2/index/L/chunks.db
+11 -> /home/claude/repo/av2/index/L/chunks.db-wal
+12 -> /home/claude/repo/av2/index/L/chunks.db
+13 -> /home/claude/repo/av2/index/L/chunks.db-wal
+14 -> /home/claude/repo/av2/index/L/chunks.db
+15 -> /home/claude/repo/av2/index/L/chunks.db-wal
+2 -> /home/claude/repo/av2/results/logs/evidencias.out
+3 -> /home/claude/repo/av2/results/raw/evid/proc_vivo.log.jsonl
+4 -> /home/claude/repo/av2/index/L/chunks.db
+5 -> /home/claude/repo/av2/index/L/vectors.f32
+6 -> /home/claude/repo/av2/index/L/texts.bin
+7 -> /home/claude/repo/av2/index/L/offsets.i64
+8 -> /home/claude/repo/av2/index/L/chunks.db-wal
+9 -> /home/claude/repo/av2/index/L/chunks.db-shm
+
+### pidstat -t (1 s)
+Linux 6.18.44-fc-v139 (vm) 	10/20/26 	_x86_64_	(2 CPU)
+
+15:46:39      UID      TGID       TID    %usr %system  %guest   %wait    %CPU   CPU  Command
+15:46:40        0      7961         -  145.00    1.00    0.00    0.00  146.00     1  python3
+15:46:40        0         -      7961    0.00    0.00    0.00    0.00    0.00     1  |__python3
+15:46:40        0         -      7963   96.00    0.00    0.00    0.00   96.00     1  |__python3
+15:46:40        0         -      7964    0.00    0.00    0.00    2.00    0.00     0  |__amostrador
+15:46:40        0         -      7965   12.00    1.00    0.00   24.00   13.00     0  |__worker-0
+15:46:40        0         -      7968   12.00    0.00    0.00   19.00   12.00     0  |__worker-1
+15:46:40        0         -      7969   12.00    0.00    0.00   21.00   12.00     0  |__worker-2
+15:46:40        0         -      7970   12.00    0.00    0.00   17.00   12.00     0  |__worker-3
+15:46:40        0         -      7971    0.00    0.00    0.00    0.00    0.00     1  |__produtor-0
+15:46:40        0         -      7972    0.00    0.00    0.00    2.00    0.00     0  |__produtor-1
+Average:        0      7961         -  145.00    1.00    0.00    0.00  146.00     -  python3
+Average:        0         -      7961    0.00    0.00    0.00    0.00    0.00     -  |__python3
+Average:        0         -      7963   96.00    0.00    0.00    0.00   96.00     -  |__python3
+Average:        0         -      7964    0.00    0.00    0.00    2.00    0.00     -  |__amostrador
+Average:        0         -      7965   12.00    1.00    0.00   24.00   13.00     -  |__worker-0
+Average:        0         -      7968   12.00    0.00    0.00   19.00   12.00     -  |__worker-1
+Average:        0         -      7969   12.00    0.00    0.00   21.00   12.00     -  |__worker-2
+Average:        0         -      7970   12.00    0.00    0.00   17.00   12.00     -  |__worker-3
+Average:        0         -      7971    0.00    0.00    0.00    0.00    0.00     -  |__produtor-0
+Average:        0         -      7972    0.00    0.00    0.00    2.00    0.00     -  |__produtor-1

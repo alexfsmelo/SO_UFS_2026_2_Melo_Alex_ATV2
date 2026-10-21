@@ -1,0 +1,67 @@
+COMANDOS DO VIDEO - AV2 COMP0472
+================================
+(rodar na raiz do repositorio SO_UFS_2026_2_Melo_Alex_ATV2, no WSL2)
+
+1. Ambiente
+-----------
+uname -r; free -h; swapon --show; nproc
+grep -E "MemFree|MemAvailable|^Cached|SwapTotal" /proc/meminfo
+
+2. Instalar dependencias (uma vez)
+----------------------------------
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+3. Gerar corpus e indice (M: 5.000 documentos, cerca de 27 mil trechos)
+------------------------------------------------------------------------
+python3 -m genresearch corpus --docs 5000 --saida data/M
+python3 -m genresearch ingest --corpus data/M --indice index/M
+ls -lh index/M
+
+4. Rodar o servidor (terminal 1)
+--------------------------------
+python3 -m genresearch serve --indice index/M --saida results/raw/demo --rotulo demo \
+  --trabalhadores 4 --produtores 2 --requisicoes 600 --chegada-ms 5 --cache-tam 32 --carga mista
+
+5. Observar o processo (terminal 2, enquanto o 4 roda)
+------------------------------------------------------
+PID=$(pgrep -f "genresearch serve" | head -1)
+ps -L -o pid,lwp,stat,pcpu,comm -p $PID
+grep -E "Threads|VmRSS|RssAnon|RssFile|VmSize" /proc/$PID/status
+grep index/ /proc/$PID/maps
+
+6. Resultado da execucao
+------------------------
+python3 -c "import json; s=json.load(open('results/raw/demo/demo.summary.json')); print(s['vazao_rps'], s['cache'], s['fila'], s['correcao'], sep='\n')"
+tail -3 results/raw/demo/demo.log.jsonl
+
+7. read x mmap (mesmo arquivo)
+------------------------------
+python3 -m genresearch.ioprobe index/M/vectors.f32 --modo read  --acesso esparso
+python3 -m genresearch.ioprobe index/M/vectors.f32 --modo mmap  --acesso esparso
+strace -c -e trace=read,mmap python3 -m genresearch.ioprobe index/M/vectors.f32 --modo read > /dev/null
+
+8. Mostrar resultados ja coletados
+----------------------------------
+ls results/raw results/figures
+cat results/tables/t_c3.md
+
+9. Falha controlada: log intercalado e cache sem mutex
+------------------------------------------------------
+python3 -m genresearch serve --indice index/M --saida results/raw/demo --rotulo inseguro \
+  --trabalhadores 4 --requisicoes 120 --cache-tam 64 --cache-modo none --log-modo unsafe --carga repetida
+python3 -c "import json; s=json.load(open('results/raw/demo/inseguro.summary.json')); print(s['correcao']['log'], s['cache'])"
+
+10. Deadlock isolado (Ctrl+C para encerrar o ingenuo)
+-----------------------------------------------------
+timeout 3 python3 experiments/deadlock_demo.py ingenuo; echo "codigo de saida: $?"
+python3 experiments/deadlock_demo.py timeout
+python3 experiments/deadlock_demo.py ordenado
+
+11. (Opcional) Rodada curta de todos os experimentos
+----------------------------------------------------
+REPS=1 ./run_all.sh rapido
+
+12. Abrir o repositorio no navegador
+------------------------------------
+https://github.com/alexfsmelo/SO_UFS_2026_2_Melo_Alex_ATV2

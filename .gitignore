@@ -1,0 +1,11 @@
+# dados e indices regeneraveis (grandes)
+data/
+index/
+*.f32
+*.i64
+*.swap
+# ambiente
+.venv/
+__pycache__/
+*.pyc
+.env

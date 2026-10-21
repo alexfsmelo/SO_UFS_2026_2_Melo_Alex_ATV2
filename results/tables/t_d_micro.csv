@@ -1,0 +1,14 @@
+teste,modo,reps,falha_media,metrica,tempo_ms,obs,escritas,retent_por_thread
+D1_contador,sem_lock,3,0.0,atualizacoes perdidas de 40000,5.045903666768901,,,
+D1_contador,sem_lock_janela,3,35000.0,atualizacoes perdidas de 40000,390.9853999999389,,,
+D1_contador,lock,3,0.0,atualizacoes perdidas de 40000,3011.2963349999973,,,
+D2_cache_micro,none,3,350.0,calculos redundantes em 50 rodadas x 8 threads,599.3600683334535,,,
+D2_cache_micro,lock,3,350.0,calculos redundantes em 50 rodadas x 8 threads,581.4213713333629,,,
+D2_cache_micro,singleflight,3,0.0,calculos redundantes em 50 rodadas x 8 threads,576.8885856667415,,,
+D3_log_micro,unsafe,3,2396.6666666666665,linhas corrompidas de 2400,334.72817833330737,,,
+D3_log_micro,lock,3,0.0,linhas corrompidas de 2400,64.49761466675828,,,
+D6_starvation,pref_leitores,3,1.4517517513333285,espera maxima do escritor (s),,escritas 1.0/5; leituras 2175,1.0,
+D6_starvation,pref_escritor,3,0.0034986846666621666,espera maxima do escritor (s),,escritas 5.0/5; leituras 2157,5.0,
+D5_deadlock,ingenuo,3,1.0,fracao encerrada pelo pai por timeout,3004.794911999928,nan,,0.0
+D5_deadlock,timeout,3,0.0,fracao encerrada pelo pai por timeout,1936.2086940000154,"[83, 83]",,82.0
+D5_deadlock,ordenado,3,0.0,fracao encerrada pelo pai por timeout,266.2860030000047,"[0, 0]",,0.0

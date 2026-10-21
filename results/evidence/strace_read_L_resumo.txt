@@ -1,0 +1,5 @@
+7920  15:46:36.171641 openat(AT_FDCWD, "index/L/vectors.f32", O_RDONLY|O_CLOEXEC) = 3
+7920  15:46:36.171707 read(3, "...", 222569473) = 222569472
+7920  15:46:36.302444 read(3, "", 1)    = 0
+7920  15:46:36.361112 close(3)          = 0
+--- read() sobre o fd 3: 2 chamadas, 222569472 bytes

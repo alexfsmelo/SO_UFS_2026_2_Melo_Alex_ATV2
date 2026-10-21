@@ -1,0 +1,33 @@
+{"ts": 1792521901.193854, "thread": "MainThread", "evento": "inicio", "config": {"indice": "index/S", "saida": "results/raw/c6", "rotulo": "c6_ollama_off_r2", "modo_io": "mmap", "trabalhadores": 2, "produtores": 2, "requisicoes": 10, "capacidade_fila": 16, "timeout_put": 1.0, "retentativas_put": 3, "chegada_ms": 0.0, "carga": "distinta", "cache_tam": 0, "cache_politica": "lru", "cache_modo": "lock", "log_modo": "lock", "top_k": 8, "max_tokens_contexto": 512, "backend": "ollama", "modelo_ollama": "deepseek-r1:1.5b", "url_ollama": "http://127.0.0.1:9", "prefill_tps": 20000.0, "decode_tps": 400.0, "tokens_saida": 16, "cpu_ms": 0.0, "taxa_falha": 0.0, "retentativas_geracao": 1, "intervalo_amostra": 0.05, "seed": 902}}
+{"ts": 1792521901.194177, "thread": "MainThread", "evento": "indice_carregado", "modo": "mmap", "n": 2696, "t_s": 0.0002, "rss_mb": 36.46484375}
+{"ts": 1792521901.238127, "thread": "worker-0", "evento": "falha_geracao", "req": 0, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.243547, "thread": "worker-0", "evento": "falha_geracao", "req": 0, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.253836, "thread": "worker-0", "evento": "consulta", "req": 0, "worker": 0, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 47.35}
+{"ts": 1792521901.255305, "thread": "worker-0", "evento": "falha_geracao", "req": 2, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.259068, "thread": "worker-1", "evento": "falha_geracao", "req": 1, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.260685, "thread": "worker-0", "evento": "falha_geracao", "req": 2, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.264474, "thread": "worker-1", "evento": "falha_geracao", "req": 1, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.274406, "thread": "worker-0", "evento": "consulta", "req": 2, "worker": 0, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 67.87}
+{"ts": 1792521901.274646, "thread": "worker-1", "evento": "consulta", "req": 1, "worker": 1, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 68.13}
+{"ts": 1792521901.279143, "thread": "worker-1", "evento": "falha_geracao", "req": 4, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.282854, "thread": "worker-0", "evento": "falha_geracao", "req": 3, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.284848, "thread": "worker-1", "evento": "falha_geracao", "req": 4, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.288306, "thread": "worker-0", "evento": "falha_geracao", "req": 3, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.295093, "thread": "worker-1", "evento": "consulta", "req": 4, "worker": 1, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 88.55}
+{"ts": 1792521901.29576, "thread": "worker-1", "evento": "falha_geracao", "req": 1000000, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.298584, "thread": "worker-0", "evento": "consulta", "req": 3, "worker": 0, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 92.05}
+{"ts": 1792521901.301126, "thread": "worker-1", "evento": "falha_geracao", "req": 1000000, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.306717, "thread": "worker-0", "evento": "falha_geracao", "req": 1000001, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.311307, "thread": "worker-1", "evento": "consulta", "req": 1000000, "worker": 1, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 100.67}
+{"ts": 1792521901.312116, "thread": "worker-0", "evento": "falha_geracao", "req": 1000001, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.312181, "thread": "worker-1", "evento": "falha_geracao", "req": 1000002, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.31758, "thread": "worker-1", "evento": "falha_geracao", "req": 1000002, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.3223, "thread": "worker-0", "evento": "consulta", "req": 1000001, "worker": 0, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 111.65}
+{"ts": 1792521901.32294, "thread": "worker-0", "evento": "falha_geracao", "req": 1000003, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.327743, "thread": "worker-1", "evento": "consulta", "req": 1000002, "worker": 1, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 117.09}
+{"ts": 1792521901.328381, "thread": "worker-1", "evento": "falha_geracao", "req": 1000004, "tentativa": 0, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.32877, "thread": "worker-0", "evento": "falha_geracao", "req": 1000003, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.33377, "thread": "worker-1", "evento": "falha_geracao", "req": 1000004, "tentativa": 1, "erro": "ollama indisponivel: <urlopen error [Errno 111] Connection refused>"}
+{"ts": 1792521901.338943, "thread": "worker-0", "evento": "consulta", "req": 1000003, "worker": 0, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 128.29}
+{"ts": 1792521901.343992, "thread": "worker-1", "evento": "consulta", "req": 1000004, "worker": 1, "hit": 0, "status": "erro_geracao", "trechos": 0, "ms": 133.31}
+{"ts": 1792521901.34457, "thread": "MainThread", "evento": "encerramento", "processadas": 10, "wall_s": 0.1442}

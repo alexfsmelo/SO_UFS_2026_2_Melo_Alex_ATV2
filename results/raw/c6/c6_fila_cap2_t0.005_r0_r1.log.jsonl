@@ -1,0 +1,158 @@
+{"ts": 1792521809.147846, "thread": "MainThread", "evento": "inicio", "config": {"indice": "index/M", "saida": "results/raw/c6", "rotulo": "c6_fila_cap2_t0.005_r0_r1", "modo_io": "mmap", "trabalhadores": 1, "produtores": 4, "requisicoes": 80, "capacidade_fila": 2, "timeout_put": 0.005, "retentativas_put": 0, "chegada_ms": 0.0, "carga": "distinta", "cache_tam": 0, "cache_politica": "lru", "cache_modo": "lock", "log_modo": "lock", "top_k": 8, "max_tokens_contexto": 512, "backend": "simulado", "modelo_ollama": "deepseek-r1:1.5b", "url_ollama": "http://localhost:11434", "prefill_tps": 20000.0, "decode_tps": 400.0, "tokens_saida": 16, "cpu_ms": 0.0, "taxa_falha": 0.0, "retentativas_geracao": 2, "intervalo_amostra": 0.05, "seed": 601}}
+{"ts": 1792521809.148144, "thread": "MainThread", "evento": "indice_carregado", "modo": "mmap", "n": 27046, "t_s": 0.0002, "rss_mb": 36.17578125}
+{"ts": 1792521809.168641, "thread": "produtor-0", "evento": "fila_cheia", "req": 2, "tentativa": 0}
+{"ts": 1792521809.168761, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000000, "tentativa": 0}
+{"ts": 1792521809.170801, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 2}
+{"ts": 1792521809.171605, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000001, "tentativa": 0}
+{"ts": 1792521809.172581, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000000, "tentativa": 0}
+{"ts": 1792521809.173754, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000001}
+{"ts": 1792521809.174334, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000000}
+{"ts": 1792521809.174707, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000000}
+{"ts": 1792521809.175985, "thread": "produtor-0", "evento": "fila_cheia", "req": 3, "tentativa": 0}
+{"ts": 1792521809.178174, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 3}
+{"ts": 1792521809.179, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000002, "tentativa": 0}
+{"ts": 1792521809.179472, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000001, "tentativa": 0}
+{"ts": 1792521809.179887, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000001, "tentativa": 0}
+{"ts": 1792521809.181185, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000002}
+{"ts": 1792521809.181592, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000001}
+{"ts": 1792521809.182025, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000001}
+{"ts": 1792521809.183365, "thread": "produtor-0", "evento": "fila_cheia", "req": 4, "tentativa": 0}
+{"ts": 1792521809.185525, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 4}
+{"ts": 1792521809.186441, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000003, "tentativa": 0}
+{"ts": 1792521809.187168, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000002, "tentativa": 0}
+{"ts": 1792521809.187524, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000002, "tentativa": 0}
+{"ts": 1792521809.188583, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000003}
+{"ts": 1792521809.189337, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000002}
+{"ts": 1792521809.189647, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000002}
+{"ts": 1792521809.190691, "thread": "produtor-0", "evento": "fila_cheia", "req": 5, "tentativa": 0}
+{"ts": 1792521809.192856, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 5}
+{"ts": 1792521809.193722, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000004, "tentativa": 0}
+{"ts": 1792521809.1945, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000003, "tentativa": 0}
+{"ts": 1792521809.194759, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000003, "tentativa": 0}
+{"ts": 1792521809.19583, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000004}
+{"ts": 1792521809.196703, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000003}
+{"ts": 1792521809.196848, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000003}
+{"ts": 1792521809.198147, "thread": "produtor-0", "evento": "fila_cheia", "req": 6, "tentativa": 0}
+{"ts": 1792521809.200316, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 6}
+{"ts": 1792521809.200959, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000005, "tentativa": 0}
+{"ts": 1792521809.201879, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000004, "tentativa": 0}
+{"ts": 1792521809.201959, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000004, "tentativa": 0}
+{"ts": 1792521809.203128, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000005}
+{"ts": 1792521809.203999, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000004}
+{"ts": 1792521809.204058, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000004}
+{"ts": 1792521809.205469, "thread": "produtor-0", "evento": "fila_cheia", "req": 7, "tentativa": 0}
+{"ts": 1792521809.207621, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 7}
+{"ts": 1792521809.2083, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000006, "tentativa": 0}
+{"ts": 1792521809.209158, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000005, "tentativa": 0}
+{"ts": 1792521809.209218, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000005, "tentativa": 0}
+{"ts": 1792521809.210374, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000006}
+{"ts": 1792521809.211258, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000005}
+{"ts": 1792521809.211369, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000005}
+{"ts": 1792521809.212837, "thread": "produtor-0", "evento": "fila_cheia", "req": 8, "tentativa": 0}
+{"ts": 1792521809.215012, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 8}
+{"ts": 1792521809.21564, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000007, "tentativa": 0}
+{"ts": 1792521809.216363, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000006, "tentativa": 0}
+{"ts": 1792521809.216549, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000006, "tentativa": 0}
+{"ts": 1792521809.217777, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000007}
+{"ts": 1792521809.218461, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000006}
+{"ts": 1792521809.218693, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000006}
+{"ts": 1792521809.220202, "thread": "produtor-0", "evento": "fila_cheia", "req": 9, "tentativa": 0}
+{"ts": 1792521809.222439, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 9}
+{"ts": 1792521809.222919, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000008, "tentativa": 0}
+{"ts": 1792521809.223563, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000007, "tentativa": 0}
+{"ts": 1792521809.223926, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000007, "tentativa": 0}
+{"ts": 1792521809.225056, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000008}
+{"ts": 1792521809.22565, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000007}
+{"ts": 1792521809.226152, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000007}
+{"ts": 1792521809.227638, "thread": "produtor-0", "evento": "fila_cheia", "req": 10, "tentativa": 0}
+{"ts": 1792521809.229836, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 10}
+{"ts": 1792521809.230268, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000009, "tentativa": 0}
+{"ts": 1792521809.230743, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000008, "tentativa": 0}
+{"ts": 1792521809.231322, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000008, "tentativa": 0}
+{"ts": 1792521809.231739, "thread": "worker-0", "evento": "consulta", "req": 0, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 68.22}
+{"ts": 1792521809.232872, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000008}
+{"ts": 1792521809.233467, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000009}
+{"ts": 1792521809.233531, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000008}
+{"ts": 1792521809.235072, "thread": "produtor-0", "evento": "fila_cheia", "req": 11, "tentativa": 0}
+{"ts": 1792521809.237239, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 11}
+{"ts": 1792521809.238031, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000010, "tentativa": 0}
+{"ts": 1792521809.238708, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000009, "tentativa": 0}
+{"ts": 1792521809.238776, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000010, "tentativa": 0}
+{"ts": 1792521809.240144, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000010}
+{"ts": 1792521809.240874, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000009}
+{"ts": 1792521809.240947, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000010}
+{"ts": 1792521809.242379, "thread": "produtor-0", "evento": "fila_cheia", "req": 12, "tentativa": 0}
+{"ts": 1792521809.244635, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 12}
+{"ts": 1792521809.245246, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000011, "tentativa": 0}
+{"ts": 1792521809.24605, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000011, "tentativa": 0}
+{"ts": 1792521809.246091, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000010, "tentativa": 0}
+{"ts": 1792521809.247332, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000011}
+{"ts": 1792521809.24818, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000011}
+{"ts": 1792521809.248223, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000010}
+{"ts": 1792521809.249794, "thread": "produtor-0", "evento": "fila_cheia", "req": 13, "tentativa": 0}
+{"ts": 1792521809.251956, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 13}
+{"ts": 1792521809.252433, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000012, "tentativa": 0}
+{"ts": 1792521809.253381, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000011, "tentativa": 0}
+{"ts": 1792521809.253444, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000012, "tentativa": 0}
+{"ts": 1792521809.25452, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000012}
+{"ts": 1792521809.255574, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000012}
+{"ts": 1792521809.255656, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000011}
+{"ts": 1792521809.257166, "thread": "produtor-0", "evento": "fila_cheia", "req": 14, "tentativa": 0}
+{"ts": 1792521809.259339, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 14}
+{"ts": 1792521809.259623, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000013, "tentativa": 0}
+{"ts": 1792521809.260866, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000012, "tentativa": 0}
+{"ts": 1792521809.260923, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000013, "tentativa": 0}
+{"ts": 1792521809.261714, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000013}
+{"ts": 1792521809.263118, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000013}
+{"ts": 1792521809.263207, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000012}
+{"ts": 1792521809.264514, "thread": "produtor-0", "evento": "fila_cheia", "req": 15, "tentativa": 0}
+{"ts": 1792521809.266727, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 15}
+{"ts": 1792521809.266837, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000014, "tentativa": 0}
+{"ts": 1792521809.268374, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000013, "tentativa": 0}
+{"ts": 1792521809.268444, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000014, "tentativa": 0}
+{"ts": 1792521809.269001, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000014}
+{"ts": 1792521809.27061, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000014}
+{"ts": 1792521809.270719, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000013}
+{"ts": 1792521809.271987, "thread": "produtor-0", "evento": "fila_cheia", "req": 16, "tentativa": 0}
+{"ts": 1792521809.274199, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 16}
+{"ts": 1792521809.274281, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000015, "tentativa": 0}
+{"ts": 1792521809.275878, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000014, "tentativa": 0}
+{"ts": 1792521809.275944, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000015, "tentativa": 0}
+{"ts": 1792521809.276465, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000015}
+{"ts": 1792521809.27808, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000014}
+{"ts": 1792521809.278151, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000015}
+{"ts": 1792521809.279367, "thread": "produtor-0", "evento": "fila_cheia", "req": 17, "tentativa": 0}
+{"ts": 1792521809.281569, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 17}
+{"ts": 1792521809.281644, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000016, "tentativa": 0}
+{"ts": 1792521809.283305, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000016, "tentativa": 0}
+{"ts": 1792521809.28337, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000015, "tentativa": 0}
+{"ts": 1792521809.283807, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000016}
+{"ts": 1792521809.285486, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000015}
+{"ts": 1792521809.285553, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000016}
+{"ts": 1792521809.286806, "thread": "produtor-0", "evento": "fila_cheia", "req": 18, "tentativa": 0}
+{"ts": 1792521809.289019, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 18}
+{"ts": 1792521809.28909, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000017, "tentativa": 0}
+{"ts": 1792521809.290668, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000017, "tentativa": 0}
+{"ts": 1792521809.290726, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000016, "tentativa": 0}
+{"ts": 1792521809.291268, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000017}
+{"ts": 1792521809.292853, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000016}
+{"ts": 1792521809.292924, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000017}
+{"ts": 1792521809.294187, "thread": "produtor-0", "evento": "fila_cheia", "req": 19, "tentativa": 0}
+{"ts": 1792521809.296237, "thread": "worker-0", "evento": "consulta", "req": 1, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 132.7}
+{"ts": 1792521809.298032, "thread": "produtor-0", "evento": "requisicao_descartada", "req": 19}
+{"ts": 1792521809.298256, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000018, "tentativa": 0}
+{"ts": 1792521809.298281, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000017, "tentativa": 0}
+{"ts": 1792521809.300461, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000017}
+{"ts": 1792521809.300542, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000018}
+{"ts": 1792521809.303351, "thread": "produtor-2", "evento": "fila_cheia", "req": 2000019, "tentativa": 0}
+{"ts": 1792521809.305526, "thread": "produtor-2", "evento": "requisicao_descartada", "req": 2000019}
+{"ts": 1792521809.305673, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000018, "tentativa": 0}
+{"ts": 1792521809.305702, "thread": "produtor-3", "evento": "fila_cheia", "req": 3000019, "tentativa": 0}
+{"ts": 1792521809.307838, "thread": "produtor-3", "evento": "requisicao_descartada", "req": 3000019}
+{"ts": 1792521809.308019, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000018}
+{"ts": 1792521809.313237, "thread": "produtor-1", "evento": "fila_cheia", "req": 1000019, "tentativa": 0}
+{"ts": 1792521809.31541, "thread": "produtor-1", "evento": "requisicao_descartada", "req": 1000019}
+{"ts": 1792521809.360801, "thread": "worker-0", "evento": "consulta", "req": 3000000, "worker": 0, "hit": 0, "status": "ok", "trechos": 6, "ms": 194.34}
+{"ts": 1792521809.428882, "thread": "worker-0", "evento": "consulta", "req": 2000009, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 195.95}
+{"ts": 1792521809.495286, "thread": "worker-0", "evento": "consulta", "req": 2000018, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 203.93}
+{"ts": 1792521809.496156, "thread": "MainThread", "evento": "encerramento", "processadas": 5, "wall_s": 0.3433}

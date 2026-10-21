@@ -1,0 +1,43 @@
+{"ts": 1792522018.2494, "thread": "MainThread", "evento": "inicio", "config": {"indice": "index/L", "saida": "results/raw/c5", "rotulo": "c5c_mmap_sem_noswap_r2", "modo_io": "mmap", "trabalhadores": 2, "produtores": 2, "requisicoes": 40, "capacidade_fila": 16, "timeout_put": 60.0, "retentativas_put": 3, "chegada_ms": 0.0, "carga": "distinta", "cache_tam": 0, "cache_politica": "lru", "cache_modo": "lock", "log_modo": "lock", "top_k": 8, "max_tokens_contexto": 512, "backend": "simulado", "modelo_ollama": "deepseek-r1:1.5b", "url_ollama": "http://localhost:11434", "prefill_tps": 20000.0, "decode_tps": 400.0, "tokens_saida": 16, "cpu_ms": 0.0, "taxa_falha": 0.0, "retentativas_geracao": 2, "intervalo_amostra": 0.1, "seed": 402}}
+{"ts": 1792522018.252405, "thread": "MainThread", "evento": "indice_carregado", "modo": "mmap", "n": 217353, "t_s": 0.0027, "rss_mb": 35.33203125}
+{"ts": 1792522018.453598, "thread": "worker-1", "evento": "consulta", "req": 1, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 188.63}
+{"ts": 1792522018.456464, "thread": "worker-0", "evento": "consulta", "req": 0, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 191.53}
+{"ts": 1792522018.558088, "thread": "worker-1", "evento": "consulta", "req": 2, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 293.12}
+{"ts": 1792522018.559948, "thread": "worker-0", "evento": "consulta", "req": 3, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 294.98}
+{"ts": 1792522018.647949, "thread": "worker-0", "evento": "consulta", "req": 5, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 382.97}
+{"ts": 1792522018.654465, "thread": "worker-1", "evento": "consulta", "req": 4, "worker": 1, "hit": 0, "status": "ok", "trechos": 7, "ms": 389.5}
+{"ts": 1792522018.742835, "thread": "worker-1", "evento": "consulta", "req": 7, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 477.86}
+{"ts": 1792522018.746425, "thread": "worker-0", "evento": "consulta", "req": 6, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 481.45}
+{"ts": 1792522018.835325, "thread": "worker-1", "evento": "consulta", "req": 8, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 570.34}
+{"ts": 1792522018.835593, "thread": "worker-0", "evento": "consulta", "req": 9, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 570.62}
+{"ts": 1792522018.927813, "thread": "worker-1", "evento": "consulta", "req": 10, "worker": 1, "hit": 0, "status": "ok", "trechos": 7, "ms": 662.83}
+{"ts": 1792522018.930327, "thread": "worker-0", "evento": "consulta", "req": 11, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 665.32}
+{"ts": 1792522019.015206, "thread": "worker-1", "evento": "consulta", "req": 12, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 750.21}
+{"ts": 1792522019.022437, "thread": "worker-0", "evento": "consulta", "req": 13, "worker": 0, "hit": 0, "status": "ok", "trechos": 6, "ms": 757.44}
+{"ts": 1792522019.111816, "thread": "worker-1", "evento": "consulta", "req": 14, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 846.82}
+{"ts": 1792522019.122955, "thread": "worker-0", "evento": "consulta", "req": 15, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 857.96}
+{"ts": 1792522019.181303, "thread": "worker-1", "evento": "consulta", "req": 16, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 916.3}
+{"ts": 1792522019.201688, "thread": "worker-0", "evento": "consulta", "req": 17, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 933.3}
+{"ts": 1792522019.255022, "thread": "worker-1", "evento": "consulta", "req": 18, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 984.93}
+{"ts": 1792522019.279024, "thread": "worker-0", "evento": "consulta", "req": 1000000, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 1008.54}
+{"ts": 1792522019.330802, "thread": "worker-1", "evento": "consulta", "req": 19, "worker": 1, "hit": 0, "status": "ok", "trechos": 7, "ms": 876.8}
+{"ts": 1792522019.358351, "thread": "worker-0", "evento": "consulta", "req": 1000001, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 895.94}
+{"ts": 1792522019.406557, "thread": "worker-1", "evento": "consulta", "req": 1000002, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 846.38}
+{"ts": 1792522019.435227, "thread": "worker-0", "evento": "consulta", "req": 1000003, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 787.02}
+{"ts": 1792522019.48215, "thread": "worker-1", "evento": "consulta", "req": 1000004, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 823.78}
+{"ts": 1792522019.512428, "thread": "worker-0", "evento": "consulta", "req": 1000005, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 769.33}
+{"ts": 1792522019.558863, "thread": "worker-1", "evento": "consulta", "req": 1000006, "worker": 1, "hit": 0, "status": "ok", "trechos": 7, "ms": 812.26}
+{"ts": 1792522019.587914, "thread": "worker-0", "evento": "consulta", "req": 1000007, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 752.34}
+{"ts": 1792522019.635539, "thread": "worker-1", "evento": "consulta", "req": 1000008, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 797.1}
+{"ts": 1792522019.668088, "thread": "worker-0", "evento": "consulta", "req": 1000009, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 740.04}
+{"ts": 1792522019.708827, "thread": "worker-1", "evento": "consulta", "req": 1000010, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 774.32}
+{"ts": 1792522019.750041, "thread": "worker-0", "evento": "consulta", "req": 1000011, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 734.54}
+{"ts": 1792522019.791407, "thread": "worker-1", "evento": "consulta", "req": 1000012, "worker": 1, "hit": 0, "status": "ok", "trechos": 7, "ms": 768.74}
+{"ts": 1792522019.828794, "thread": "worker-0", "evento": "consulta", "req": 1000013, "worker": 0, "hit": 0, "status": "ok", "trechos": 7, "ms": 716.79}
+{"ts": 1792522019.864799, "thread": "worker-1", "evento": "consulta", "req": 1000014, "worker": 1, "hit": 0, "status": "ok", "trechos": 8, "ms": 741.64}
+{"ts": 1792522019.90907, "thread": "worker-0", "evento": "consulta", "req": 1000015, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 727.57}
+{"ts": 1792522019.942519, "thread": "worker-1", "evento": "consulta", "req": 1000016, "worker": 1, "hit": 0, "status": "ok", "trechos": 7, "ms": 740.63}
+{"ts": 1792522019.999427, "thread": "worker-0", "evento": "consulta", "req": 1000017, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 744.1}
+{"ts": 1792522020.069356, "thread": "worker-1", "evento": "consulta", "req": 1000018, "worker": 1, "hit": 0, "status": "ok", "trechos": 7, "ms": 790.11}
+{"ts": 1792522020.087074, "thread": "worker-0", "evento": "consulta", "req": 1000019, "worker": 0, "hit": 0, "status": "ok", "trechos": 8, "ms": 756.01}
+{"ts": 1792522020.087814, "thread": "MainThread", "evento": "encerramento", "processadas": 40, "wall_s": 1.8343}

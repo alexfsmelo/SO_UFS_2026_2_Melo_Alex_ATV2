@@ -1,0 +1,4 @@
+7936  15:46:36.562064 openat(AT_FDCWD, "index/L/vectors.f32", O_RDONLY|O_CLOEXEC) = 3
+7936  15:46:36.562120 mmap(NULL, 222569472, PROT_READ, MAP_SHARED, 3, 0) = 0x7fc62dc00000
+7936  15:46:36.600392 close(3)          = 0
+--- read() sobre o fd 3: 0 chamadas, 0 bytes

@@ -1,0 +1,39 @@
+digraph G {
+  rankdir=LR;
+  graph [fontname="DejaVu Sans", fontsize=10, nodesep=0.25, ranksep=0.45, pad=0.15, bgcolor="white"];
+  node  [fontname="DejaVu Sans", fontsize=9, shape=box, style="rounded,filled", color="#52514e", fillcolor="#ffffff", penwidth=1];
+  edge  [fontname="DejaVu Sans", fontsize=8, color="#52514e", fontcolor="#52514e", arrowsize=0.6];
+
+  subgraph cluster_proc {
+    label="processo python (PID único, threads nomeadas via prctl)"; fontsize=9; fontcolor="#52514e";
+    style="rounded,dashed"; color="#9a9893";
+
+    p [label="produtores\n(produtor-0, produtor-1)", fillcolor="#e8f1fc"];
+    q [label="buffer limitado\nsemáforos empty / full\n+ mutex, timeout no put", fillcolor="#fff4d6"];
+    w [label="trabalhadores\n(worker-0 .. worker-3)", fillcolor="#e8f1fc"];
+    c [label="cache compartilhado\nLRU | FIFO\nmutex | singleflight", fillcolor="#fde7dd"];
+    r [label="recuperação\nembedding (hash, 256 d)\nvarredura M·q, top-k\ncontexto limitado", fillcolor="#e3f5ee"];
+    g [label="geração\nsimulada (espera E/S)\nou Ollama (HTTP)", fillcolor="#e3f5ee"];
+    l [label="log JSONL\n1 write() por linha\nsob mutex", fillcolor="#f2f1ee"];
+    s [label="amostrador\n/proc/self/status, io\ngetrusage", fillcolor="#f2f1ee"];
+  }
+
+  subgraph cluster_disk {
+    label="armazenamento (ext4)"; fontsize=9; fontcolor="#52514e"; style="rounded"; color="#9a9893";
+    v [label="vectors.f32\nN x 256 float32", shape=cylinder, fillcolor="#ffffff"];
+    t [label="texts.bin + offsets.i64", shape=cylinder, fillcolor="#ffffff"];
+    d [label="chunks.db (SQLite)", shape=cylinder, fillcolor="#ffffff"];
+  }
+  pc [label="cache de páginas\ndo kernel", shape=box, style="filled", fillcolor="#f2f1ee"];
+
+  p -> q [label="put()"];
+  q -> w [label="get()"];
+  w -> c [label="chave normalizada"];
+  c -> r [label="erro de cache"];
+  r -> g;
+  g -> c [label="resposta", style=dashed];
+  w -> l [style=dotted, arrowhead=none];
+  r -> pc [label="read() ou mmap()"];
+  pc -> v; pc -> t;
+  r -> d [label="metadados"];
+}

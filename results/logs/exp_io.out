@@ -1,0 +1,17 @@
+[2026-10-20T15:29:29] C1/C2 S varredura read ok
+[2026-10-20T15:29:30] C1/C2 S varredura mmap ok
+[2026-10-20T15:29:30] C1/C2 S esparso read ok
+[2026-10-20T15:29:31] C1/C2 S esparso mmap ok
+[2026-10-20T15:29:32] C1/C2 M varredura read ok
+[2026-10-20T15:29:33] C1/C2 M varredura mmap ok
+[2026-10-20T15:29:34] C1/C2 M esparso read ok
+[2026-10-20T15:29:35] C1/C2 M esparso mmap ok
+[2026-10-20T15:29:37] C1/C2 L varredura read ok
+[2026-10-20T15:29:38] C1/C2 L varredura mmap ok
+[2026-10-20T15:29:40] C1/C2 L esparso read ok
+[2026-10-20T15:29:41] C1/C2 L esparso mmap ok
+[2026-10-20T15:29:46] C1/C2 XL varredura read ok
+[2026-10-20T15:29:50] C1/C2 XL varredura mmap ok
+[2026-10-20T15:29:55] C1/C2 XL esparso read ok
+[2026-10-20T15:29:56] C1/C2 XL esparso mmap ok
+[2026-10-20T15:30:02] C1/C2 madvise ok
